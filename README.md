@@ -1,7 +1,7 @@
 Rag Adjust
 ==========
 
-A bit of JavaScript to automatically fix the rag of any body of text. 
+A bit of JavaScript to automatically fix the rag of any body of text. Where you allow your lines to break in a block of text can be very important for readability, and quite tricky within a fluid layout. With this script you can set how and where you want your lines to break, creating a much more pleasing text rag.
 
 ## Setup
 
