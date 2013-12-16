@@ -41,9 +41,7 @@ Then, in your own JavaScript, set the parameters:
 There are only two parameters to set:
 
 ```JS
-
-	ragadjust(elements, method);
-
+ragadjust(elements, method);
 ```
 
 * __Elements__ – A CSS selector list of the elements you wish to modify.
