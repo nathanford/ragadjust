@@ -46,10 +46,10 @@ There are only two parameters to set:
 
 ```
 
-* ##Elements## – A CSS selector list of the elements you wish to modify.
-* ##Method## – Choose which rag-adjust method you want to employ.
-** __emphasis__ – Text of three or less words in bold or italics does not break across lines.
-** __small-words__ – Breaks lines before words of three or less characters.
-** __prepositions__ – Breaks lines before prepositions.
+* __Elements__ – A CSS selector list of the elements you wish to modify.
+* __Method__ – Choose which rag-adjust method you want to employ.
+- _emphasis_ – Text of three or less words in bold or italics does not break across lines.
+- _small-words_ – Breaks lines before words of three or less characters.
+- _prepositions_ – Breaks lines before prepositions.
 
 ### Suggestions, questions or concerns? nathan@artequalswork.com
