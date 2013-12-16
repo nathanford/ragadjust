@@ -1,4 +1,4 @@
-ragadjust = function (s, option) {
+ragadjust = function (s, method) {
 	
 	if (document.querySelectorAll) {
 	
@@ -17,21 +17,21 @@ ragadjust = function (s, option) {
 					
 					elehtml = ele.innerHTML;
 			
-			if (option == 'small-words' || option == 'all') 
+			if (method == 'small-words' || method == 'all') 
 				
 				// replace small words
 				elehtml = elehtml.replace(smallwords, function(contents, p1, p2) {
 		        return p1 + p2.replace(/\s/g, '&nbsp;');
 		    }); 
 			
-			if (option == 'prepositions' || option == 'all') 
+			if (method == 'prepositions' || method == 'all') 
 			
 				// replace prepositions (greater than 3 characters)
 				elehtml = elehtml.replace(preps, function(contents, p1, p2) {
 				        return p1 + p2.replace(/\s/gi, '&nbsp;');
 				    });
 			
-			if (option == 'emphasis' || option == 'all') 
+			if (method == 'emphasis' || method == 'all') 
 			
 				// emphasized text
 				elehtml = elehtml.replace(emphasis, function(contents, p1, p2, p3, p4, p5) {
