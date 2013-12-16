@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset=utf-8 />
+<meta name="author" content="Nathan" />
+<meta name="description" content="Rag Adjust demo" />
+
+<title>Rag Adjust demo</title>
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+
+	body {
+		padding: 5% 10% 10%;
+		font-family: 'Droid Sans', 'Lucida Sans', sans-serif;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 3em;
+		font-size: 4vw;
+		margin: 0;
+	}
+	
+	h2 {
+		font-size: 1.8em;
+		margin: 2em 0 1em;
+	}
+	
+	h3 {
+		font-size: 1em;
+		margin: 1em 0 0;
+	}
+	
+	h4 {
+		margin: 0 0 2em;
+		font-weight: 400;
+		font-style: italic;
+	}
+	
+	p, li, h3 {
+		max-width: 32em;
+	}
+	
+	p {
+		margin: 0;
+	}
+	
+	p + p {
+		text-indent: 1em;
+	}
+	
+	li {
+		margin-bottom: 1ex;
+	}
+	
+	blockquote {
+		margin: 1em;
+		font-style: italic;
+	}
+	
+	@media only screen and (max-width: 840px) {
+	
+	h1 {
+		font-size: 2em !important;
+	}
+	
+	}
+	
+	@media only screen and (min-width: 1500px) {
+	
+	h1 {
+		font-size: 3em !important;
+	}
+	
+	}
+
+</style>
+
+<!-- add raggity script in the head -->
+<script src="./js/ragadjust.js" type="text/javascript"></script>
+
+</head>
+<body id="index">
+	
+	<article>
+	
+		<h1>Run Ragged</h1>
+		<h4>by Mark Boulton</h4>
+		
+		<p>You care about type, right? <em>You care about</em> words and how they look, read, and are understood. If you <a href="#">pick up a book or magazine</a>, you notice the moment something is out of place; an orphan, rivers within paragraphs of justified prose, or Caps masquerading as Small Caps. So, why, I ask you, is your stance any different on the web?</p>
+		
+		<p>We&rsquo;re told time and time again that as a person who makes websites we have to get comfortable with our lack of control. On the web, this is a feature, not a bug. But that doesn&rsquo;t mean we have to lower our standards, or not strive for the same amount of typographic craft of our print-based cousins. We shouldn&rsquo;t leave good typesetting at the door because we can&rsquo;t control the line length.</p>
+		
+		<p>When I typeset books, I&rsquo;d spend hours manipulating the right rag to create a pleasurable flow from line to line. Maximising the space available, but ensuring there are no line-breaks or orphaned words that disrupt the flow of reading. Setting a right rag relies on a bunch of guidelines – or in the case of how I was first taught, these were called violations!</p> 
+		
+		<h3>Violation 1. Never break a line immediately after a preposition</h3>
+		
+		<p>Prepositions are important, frequently used words in English. They link nouns, pronouns and other words together in as sentence. And links should not be broken if you can help it. Ending a line on a preposition breaks the join from one word to another and forces the reader to work harder joining two words over two lines.</p>
+		<br>
+		<p>For example:</p> 
+		
+		<blockquote>&lsquo;The container is for the butter&rsquo;</blockquote>
+		
+		<p>The preposition here is <em>for</em> and shows the relationship between the butter and the container. If this were typeset on a line and the line break was after the word <em>for</em>, then the reader would have to carry that through to the next line. The sentence would not flow.</p>
+		
+		<p>There are lots of prepositions in English – about 150 – but only 70 or so in use.</p>
+		
+		<h3>Violation 2. Never break a line immediately following a dash</h3>
+		
+		<p>A dash – either an Em-dash or En-dash – can be used as a pause in the reading, or as used here, a point at which you introduce something that is not within the flow of the sentence. Like an aside. Ending with a pause on the end of the line would have the same effect as ending on a preposition. It&rsquo;s disruptive to the flow of reading.</p>
+		
+		<h3>Violation 3. No small words at the end of a line</h3>
+		
+		<p>Don&rsquo;t end a line with small words. Most of these will actually be covered by no 1. But there will be exceptions. My general rule of thumb here is not to leave words of two or three letters at the end of a line.</p>
+		
+		<h3>Violation 4. Hyphenation</h3>
+		
+		<p>In print, hyphens are used at the end of lines to join words together over a line break. Mostly this is used in justified body text, and no doubt you will be used to seeing it in newspapers or novels. A good rule of thumb is to no allow more than two consecutive hyphens at the end of a line.</p>
+		
+		<p>On the web, of course, we can use the CSS attribute &lsquo;hyphen&rsquo;. It&rsquo;s reasonably supported with the exception of Chrome. Of course, it works best when combined with justified text to retain the neat right margin.</p>
+		
+		<h3>Violation 5. Don&rsquo;t break emphasised words if three or less words</h3>
+		
+		<p>If you have a few words emphasised, for example:</p>
+		
+		<blockquote>&lsquo;That cake was <strong>absolutely delicious</strong>!&rsquo;</blockquote>
+		
+		<p>Then try not to word break between them. It&rsquo;s important the reader reads through all three words as a group.</p>
+		
+		<h2>How do we do all of that on the web?</h2>
+		
+		<p>All of those guidelines are relatively easy to implement in print. But what about the web? Where content is poured into a template from a CMS? Well, there are things we can do. Meet your new friend, the Non-breaking space, or as you may know them: &amp;nbsp;.</p>
+		
+		<p>The guidelines above are all based on one decision for the typesetter; &lsquo;when should I break the line&rsquo;?</p> 
+		
+		<p>We can simply run through a body of text and add the nbsp; based on these sets of questions:</p>
+		
+		<ol>
+			<li>Are there any prepositions in the text? If so, add a &amp;nbsp; after them.</li>
+			<li>Are there any dashes? If so, add a &amp;nbsp; after them.</li>
+			<li>Are there any words less than three characters that you haven&rsquo;t already added spaces to? If so, add a &amp;nbsp; after them.</li>
+			<li>Are there any emphasised groups of words either two or three words long? If so, add a space in between them.</li>
+		</ol>
+		
+		<p>For a short piece of text, this isn&rsquo;t such a problem. But for longer bodies of text, this is a bit arduous. Also, as I said, lots of websites use a CMS and just dump the text into a template. What then? We can&rsquo;t expect our content creators to manually manicure a right rag based on these guidelines. In this instance, we really need this to be automatic.</p>
+		
+		<p>There isn&rsquo;t any reason why, on the web, we can&rsquo;t just pass the question of &lsquo;when should I break the line?&rsquo; straight to the browser by way of a script which compares the text against a set of rules. In plain English, this script could be:</p>
+		
+		<ol>
+			<li>Scan the text for...</li>
+			<li>Prepositions. If found, add &amp;nbsp; after them.</li>
+			<li>For dashes. If found, add &amp;nbsp; after them.</li>
+			<li>Words less than three characters that aren&rsquo;t prepositions. If found, add &amp;nbsp; after them.</li>
+			<li>Emphasised words that run consecutively between one and three three words. If found, add &amp;nbsp; between all of the words.</li>
+		</ol>
+		
+		<h2><a href="#">Or just use this script.</a></h2>
+		
+		<!-- call the raggity function after the content -->
+		<script type="text/javascript">
+			
+			ragadjust('p, li, h3', 'all');
+		
+		</script>
+	
+	</article>
+	
+</body>
+</html>
