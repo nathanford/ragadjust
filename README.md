@@ -52,4 +52,4 @@ There are only two parameters to set:
   - _small-words_ – Breaks lines before words of three or less characters.
   - _prepositions_ – Breaks lines before prepositions.
 
-### Suggestions, questions or concerns? nathan@artequalswork.com
+#### Suggestions, questions or concerns? nathan@artequalswork.com
