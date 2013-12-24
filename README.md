@@ -49,5 +49,10 @@ ragadjust(elements, method);
   - _emphasis_ – Text of three or less words in bold or italics does not break across lines.
   - _small-words_ – Breaks lines before words of three or less characters.
   - _prepositions_ – Breaks lines before prepositions.
+  - _dashes_ – Breaks lines before hyphens and dashes.
+
+## Support
+
+Rag Adjust will work in all modern browsers and IE8+.
 
 #### Suggestions, questions or concerns? nathan@artequalswork.com

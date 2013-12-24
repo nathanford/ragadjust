@@ -9,7 +9,7 @@ ragadjust = function (s, method) {
 				
 				smallwords = /(\s|^)(([a-zA-Z-_(]{1,2}('|’)*[a-zA-Z-_,;]{0,1}?\s)+)/gi, // words with 3 or less characters
 				
-				hyphens = /([-–—])\s/gi,
+				dashes = /([-–—])\s/gi,
 				
 				emphasis = /(<(strong|em|b|i)>)(([^\s]+\s*){2,3})?(<\/(strong|em|b|i)>)/gi;
 		
@@ -32,10 +32,10 @@ ragadjust = function (s, method) {
 		        return p1 + p2.replace(/\s/g, '&#160;');
 		    });
 		    
-		  if (method == 'hyphens' || method == 'all') 
+		  if (method == 'dashes' || method == 'all') 
 		  	
 		  	// replace small words
-		  	elehtml = elehtml.replace(hyphens, function(contents) {
+		  	elehtml = elehtml.replace(dashes, function(contents) {
 		        return contents.replace(/\s/g, '&#160;');
 		    }); 
 			
