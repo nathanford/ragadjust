@@ -1,0 +1,21 @@
+{
+  "name": "ragadjust",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nathanford/ragadjust",
+  "authors": [
+    "Nathan Ford <nathan@artequalswork.com>"
+  ],
+  "description": "A bit of JavaScript to fix your text rag for prepositions, small words, or emphasis.",
+  "main": "js/ragadjust.js",
+  "keywords": [
+    "typography"
+  ],
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
